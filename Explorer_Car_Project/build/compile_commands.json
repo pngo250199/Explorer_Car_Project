@@ -1,0 +1,20 @@
+[
+{
+  "directory": "/home/henry/Documents/Explorer_Car_Project/build",
+  "command": "/usr/bin/arm-none-eabi-gcc -DSTM32F411xE -I/home/henry/Documents/Explorer_Car_Project/include -I/home/henry/Documents/Explorer_Car_Project/Inc -I/home/henry/Documents/Explorer_Car_Project/chip_headers -I/home/henry/Documents/Explorer_Car_Project/chip_headers/CMSIS/Include -I/home/henry/Documents/Explorer_Car_Project/chip_headers/CMSIS/Device/ST/STM32F4xx/Include -g -std=gnu11 --specs=nosys.specs -o CMakeFiles/EmbeddedProject.dir/Src/main.c.o -c /home/henry/Documents/Explorer_Car_Project/Src/main.c",
+  "file": "/home/henry/Documents/Explorer_Car_Project/Src/main.c",
+  "output": "/home/henry/Documents/Explorer_Car_Project/build/CMakeFiles/EmbeddedProject.dir/Src/main.c.o"
+},
+{
+  "directory": "/home/henry/Documents/Explorer_Car_Project/build",
+  "command": "/usr/bin/arm-none-eabi-gcc -DSTM32F411xE -I/home/henry/Documents/Explorer_Car_Project/include -I/home/henry/Documents/Explorer_Car_Project/Inc -I/home/henry/Documents/Explorer_Car_Project/chip_headers -I/home/henry/Documents/Explorer_Car_Project/chip_headers/CMSIS/Include -I/home/henry/Documents/Explorer_Car_Project/chip_headers/CMSIS/Device/ST/STM32F4xx/Include -g -std=gnu11 --specs=nosys.specs -o CMakeFiles/EmbeddedProject.dir/Src/gpio.c.o -c /home/henry/Documents/Explorer_Car_Project/Src/gpio.c",
+  "file": "/home/henry/Documents/Explorer_Car_Project/Src/gpio.c",
+  "output": "/home/henry/Documents/Explorer_Car_Project/build/CMakeFiles/EmbeddedProject.dir/Src/gpio.c.o"
+},
+{
+  "directory": "/home/henry/Documents/Explorer_Car_Project/build",
+  "command": "/usr/bin/arm-none-eabi-gcc -DSTM32F411xE -I/home/henry/Documents/Explorer_Car_Project/include -I/home/henry/Documents/Explorer_Car_Project/Inc -I/home/henry/Documents/Explorer_Car_Project/chip_headers -I/home/henry/Documents/Explorer_Car_Project/chip_headers/CMSIS/Include -I/home/henry/Documents/Explorer_Car_Project/chip_headers/CMSIS/Device/ST/STM32F4xx/Include -g -std=gnu11 --specs=nosys.specs -o CMakeFiles/EmbeddedProject.dir/Src/spi.c.o -c /home/henry/Documents/Explorer_Car_Project/Src/spi.c",
+  "file": "/home/henry/Documents/Explorer_Car_Project/Src/spi.c",
+  "output": "/home/henry/Documents/Explorer_Car_Project/build/CMakeFiles/EmbeddedProject.dir/Src/spi.c.o"
+}
+]

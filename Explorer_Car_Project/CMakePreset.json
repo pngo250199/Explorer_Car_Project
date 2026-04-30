@@ -1,0 +1,15 @@
+{
+  "version": 4,
+  "configurePresets": [
+    {
+      "name": "arm-debug",
+      "displayName": "ARM Cortex-M Debug",
+      "binaryDir": "${sourceDir}/build/debug",
+      "generator": "Ninja",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_C_COMPILER": "arm-none-eabi-gcc"
+      }
+    }
+  ]
+}
