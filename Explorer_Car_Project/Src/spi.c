@@ -31,7 +31,7 @@ void SPI_init(void)
 
     //bit 0 to 7 using AFR 0
     GPIOB -> AFR[0] &= ~((0xF << (1*4)) | (0xF << (2*4))); // clear AFR for GPIOB 1 and 2
-    GPIOB -> AFR[0] |= ((1 << (1*4)) | (2 << (2*4)));  //set AFR for GPIOB 1 and 2
+    GPIOB -> AFR[0] |= ((5 << (1*4)) | (5 << (2*4)));  //set AFR for GPIOB 1 and 2
 
 }
 
