@@ -9,48 +9,60 @@
 #define SR_RXNE 0x0
 #define SR_BSY 0x7
 #define SPI1EN 0x12
-#define GPIOAEN 0x0
+#define GPIOBEN 0x02
 
 void SPI_init(void)
 {
 	//RCC for GPIOA
-    RCC->AHB1ENR |= GPIOAEN;
+    RCC->AHB1ENR |= GPIOBEN;
     //RCC for SPI1
    // RCC->APB2ENR |= SPI1EN;
 
 
-    //set PA5 6 and 7 for alternate function pins
-    GPIOA -> MODER &= ~((1U << 10) | (1U << 12) | (1U << 14)); //clear bit for PA5 6 and 7
-    GPIOA -> MODER |= ((1U << 11) | (1U << 13) | (1U << 15)); //set bit for PA5 6 and 7
+    //set PB 1 and 2 for alternate function pins
+    GPIOB->MODER &= ~((3U << (1 * 2)) | (3U << (2 * 2)));; //clear bit for PB 1 and 2
+    GPIOB->MODER |= ((2U << (1 * 2)) | (2U << (2 * 2))); //set bit for PB 1 and 2
 
 
     //set PA9 for output
-    GPIOA -> MODER &= (1U << 19);
-    GPIOA -> MODER |= (1U << 18);
+    GPIOB -> MODER &= (1U << 19);
+    GPIOB -> MODER |= (1U << 18);
 
 
     //bit 0 to 7 using AFR 0
-    GPIOA -> AFR[0] |= ((1U << 20) | (1U << 22) | (1U << 24) | (1U << 26) | (1U << 28));
-    GPIOA -> AFR[0] &= ~((1U << 21) | (1U << 23) | (1U << 25) | (1U << 27) | (1U << 31));
+    GPIOB -> AFR[0] |= ((1U << 20) | (1U << 22) | (1U << 24) | (1U << 26) | (1U << 28));
+    GPIOB -> AFR[0] &= ~((1U << 21) | (1U << 23) | (1U << 25) | (1U << 27) | (1U << 31));
 
 }
 
 void SPI1_config(void)
 {
-    //RCC for SPI1
-    RCC->APB2ENR |= SPI1EN;
+    // 1. Enable clock for SPI1
+    RCC->APB2ENR |= (1 << 12); // SPI1EN
 
-    //set clock to fPCLK/4 (frequency Peripheral Clock 0 fPCLK); Divide for 4 for slower speed
-    SPI1 -> CR1 |= (1U << 3);
-    SPI1 -> CR1 &= ~(1U << 4);
-    SPI1 -> CR1 &= ~(1U << 5);
+    // 2. Configure as MASTER
+    SPI1->CR1 |= (1 << 2); // MSTR = 1
 
-    //set up full duplex
-    SPI1 -> CR1 &= ~ (1U << 10);
+    // 3. Set baud rate = fPCLK / 4
+    SPI1->CR1 &= ~(7 << 3); // clear BR[5:3]
+    SPI1->CR1 |=  (1 << 3); // 001
 
-    //CPOL ( Clock Polarity) *Polarity: tích phân cực
-    //CPHA
-    //baud rate
+    // 4. CPOL = 0, CPHA = 0 (Mode 0)
+    SPI1->CR1 &= ~(1 << 1); // CPOL = 0
+    SPI1->CR1 &= ~(1 << 0); // CPHA = 0
 
+    // 5. Full duplex (2-line)
+    SPI1->CR1 &= ~(1 << 15); // BIDIMODE = 0
+    SPI1->CR1 &= ~(1 << 10); // RXONLY = 0
+
+    // 6. Software slave management
+    SPI1->CR1 |= (1 << 9); // SSM = 1
+    SPI1->CR1 |= (1 << 8); // SSI = 1
+
+    // 7. Data frame = 8-bit
+    SPI1->CR1 &= ~(1 << 11); // DFF = 0
+
+    // 8. Enable SPI
+    SPI1->CR1 |= (1 << 6); // SPE = 1
 }
 
