@@ -24,7 +24,7 @@ target_link_options(${PROJECT_NAME} PUBLIC "--specs=nosys.specs")
 
 target_include_directories(${PROJECT_NAME} PUBLIC 
     include
-    Inc
+    Inc/Firmwares_headers
     chip_headers
     chip_headers/CMSIS/Include
     chip_headers/CMSIS/Device/ST/STM32F4xx/Include
