@@ -11,7 +11,9 @@ set(CMAKE_SYSTEM_NAME Generic)
 add_executable(${PROJECT_NAME} 
 Src/main.c
 Src/gpio.c
-Src/spi.c)
+Src/spi.c
+Src/tim.c
+Src/SysTick.c)
 # Add this line right after the add_executable line
 set_target_properties(${PROJECT_NAME} PROPERTIES SUFFIX ".elf")
 target_include_directories(${PROJECT_NAME} PUBLIC include)
