@@ -18,27 +18,26 @@ void SPI_init(void)
     //RCC for SPI1
    // RCC->APB2ENR |= SPI1EN;
 
-  
+
     //set PB 1 and 2 for alternate function pins
     GPIOB->MODER &= ~((3U << (1 * 2)) | (3U << (2 * 2)));; //clear bit for PB 1 and 2
     GPIOB->MODER |= ((2U << (1 * 2)) | (2U << (2 * 2))); //set bit for PB 1 and 2
 
 
     //set PA9 for output
-    GPIOB -> MODER &= ~(3U << (9 * 2));
-    GPIOB -> MODER |= (1U << (9*2));
+    GPIOB -> MODER &= (3U << (9 * 2)); //clear bit for PB 9
+    GPIOB -> MODER |= (2U << (9*2)); //set bit for PB 9
 
 
     //bit 0 to 7 using AFR 0
     GPIOB -> AFR[0] &= ~((0xF << (1*4)) | (0xF << (2*4))); // clear AFR for GPIOB 1 and 2
     GPIOB -> AFR[0] |= ((5 << (1*4)) | (5 << (2*4)));  //set AFR for GPIOB 1 and 2
-
 }
 
 void SPI1_config(void)
 {
     // 1. Enable clock for SPI1
-    RCC->APB2ENR |= SPI1EN; // SPI1EN
+    RCC->APB2ENR |= (1 << 12); // SPI1EN
 
     // 2. Configure as MASTER
     SPI1->CR1 |= (1 << 2); // MSTR = 1
@@ -64,6 +63,31 @@ void SPI1_config(void)
 
     // 8. Enable SPI
     SPI1->CR1 |= (1 << 6); // SPE = 1
+}
+
+void spi1_transmit(uint8_t *data,uint32_t size)
+{
+	uint32_t i=0;
+	uint8_t temp;
+
+	while(i<size)
+	{
+		/*Wait until TXE is set*/
+		while(!(SPI1->SR & (SR_TXE))){}
+
+		/*Write the data to the data register*/
+		SPI1->DR = data[i];
+		i++;
+	}
+	/*Wait until TXE is set*/
+	while(!(SPI1->SR & (SR_TXE))){}
+
+	/*Wait for BUSY flag to reset*/
+	while((SPI1->SR & (SR_BSY))){}
+
+	/*Clear OVR flag*/
+	temp = SPI1->DR;
+	temp = SPI1->SR;
 }
 
 void spi1_receive(uint8_t *data,uint32_t size)
