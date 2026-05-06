@@ -11,7 +11,7 @@
 #define SPI1EN 0x12
 #define GPIOBEN 0x02
 
-void SPI_init(void)
+void spi_init(void)
 {
 	//RCC for GPIOA
     RCC->AHB1ENR |= GPIOBEN;
