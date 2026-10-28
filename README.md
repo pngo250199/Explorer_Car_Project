@@ -1,3 +1,29 @@
-1. About the project
- - Building
-<img width="1220" height="1081" alt="Screenshot From 2026-04-30 12-35-12" src="https://github.com/user-attachments/assets/2dd20ab8-1940-43fc-83e5-80926f0e5486" />
+1. Project diagram
+```text
+Car Explorer
+├── Brain
+│   ├── STM32F4
+│   └── Cortex-M
+│
+├── Sensors
+│   ├── I2C touchless sensor
+│   └── Ultrasonic
+│
+├── Firmwares
+│   ├── SPI
+│   ├── GPIO
+│   ├── Timer
+│   ├── TIM2
+│   └── SysTick / Interrupt
+│
+├── Connections
+│   ├── Main control
+│   ├── GPIO
+│   ├── DC motors
+│   ├── Signal GPIO
+│   └── PWM
+│
+└── Software
+    ├── Low-C
+    ├── CMake
+    └── Rust (optional)```
