@@ -1,4 +1,7 @@
-1. Project diagram
+1. Project diagram v1
+   <img width="1220" height="1081" alt="image" src="https://github.com/user-attachments/assets/7d944adb-b70b-46f3-8ceb-3bbc3ac64c67" />
+
+3. Project diagram v2
 ```text
                     AUTONOMOUS EXPLORER CAR
                               │
