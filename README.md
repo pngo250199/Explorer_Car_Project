@@ -1,29 +1,37 @@
 1. Project diagram
 ```text
-Car Explorer
-├── Brain
-│   ├── STM32F4
-│   └── Cortex-M
-│
-├── Sensors
-│   ├── I2C touchless sensor
-│   └── Ultrasonic
-│
-├── Firmwares
-│   ├── SPI
-│   ├── GPIO
-│   ├── Timer
-│   ├── TIM2
-│   └── SysTick / Interrupt
-│
-├── Connections
-│   ├── Main control
-│   ├── GPIO
-│   ├── DC motors
-│   ├── Signal GPIO
-│   └── PWM
-│
-└── Software
-    ├── Low-C
-    ├── CMake
-    └── Rust (optional)```
+                    AUTONOMOUS EXPLORER CAR
+                              │
+             ┌────────────────┴────────────────┐
+             │                                 │
+             ▼                                 ▼
+       PERCEPTION BRAIN                   CONTROL BRAIN
+          Zybo Z7                         STM32F103
+        Zynq-7000
+             │                                 │
+       ┌─────┴─────┐                   ┌───────┴────────┐
+       │           │                   │                │
+ Cortex-A9       FPGA                Sensors         Control
+    PS             PL                  │                │
+       │           │                   │                │
+       │      Camera pipeline       Ultrasonic         PID
+       │      Edge detection       IR sensors       State-space
+       │      Filtering            Encoders          Navigation
+       │      Acceleration             │                │
+       │           │                   │                │
+       └─────┬─────┘                   └───────┬────────┘
+             │                                 │
+             │       UART / SPI                │
+             └────────────────────────────────►│
+                                               │
+                                      ┌────────┴────────┐
+                                      │                 │
+                                     PWM              GPIO
+                                      │                 │
+                                      └────────┬────────┘
+                                               ▼
+                                          Motor Driver
+                                               │
+                                         ┌─────┴─────┐
+                                         ▼           ▼
+                                    Left Motor   Right Motor
