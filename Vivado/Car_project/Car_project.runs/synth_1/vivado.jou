@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2026.1 (64-bit)
+# SW Build 6511674 on Tue Jun 16 11:01:26 MDT 2026
+# IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+# SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+# Start of session at: Mon Nov  2 12:42:56 2026
+# Process ID         : 717582
+# Current directory  : /home/henry/Embedded/Vivado/Car_project/Car_project.runs/synth_1
+# Command line       : vivado -log design_1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
+# Log file           : /home/henry/Embedded/Vivado/Car_project/Car_project.runs/synth_1/design_1_wrapper.vds
+# Journal file       : /home/henry/Embedded/Vivado/Car_project/Car_project.runs/synth_1/vivado.jou
+# Running On         : henry-ThinkPad-L14-Gen-4
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 26.04 LTS
+# Processor Detail   : AMD Ryzen 5 PRO 7530U with Radeon Graphics
+# CPU Frequency      : 1637.723 MHz
+# CPU Physical cores : 6
+# CPU Logical cores  : 12
+# Host memory        : 14947 MB
+# Swap memory        : 4294 MB
+# Total Virtual      : 19242 MB
+# Available Virtual  : 9420 MB
+#-----------------------------------------------------------
+source design_1_wrapper.tcl -notrace

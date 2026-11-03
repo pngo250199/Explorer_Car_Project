@@ -1,0 +1,4 @@
+domain_path: /home/henry/Embedded/Vitis/car_project/linux_platform/zynq_fsbl/zynq_fsbl_bsp
+app_src_dir: /home/henry/xilinx/2026.1/Vitis/data/embeddedsw/lib/sw_apps/zynq_fsbl
+template: zynq_fsbl
+lang: c

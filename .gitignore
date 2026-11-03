@@ -1,0 +1,22 @@
+# Build outputs
+build/
+cmake-build-*/
+Debug/
+Release/
+*.o
+*.elf
+*.hex
+*.bin
+*.map
+
+# VS Code
+.vscode/
+!.vscode/extensions.json
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
