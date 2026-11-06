@@ -4,7 +4,7 @@
     "xci_name": "design_1_customIP_0_0",
     "cell_name": "customIP_0",
     "component_reference": "user.org:user:customIP:1.0",
-    "ip_revision": "5",
+    "ip_revision": "16",
     "gen_directory": "../../../../../../Car_project.gen/sources_1/bd/design_1/ip/design_1_customIP_0_0",
     "parameters": {
       "component_parameters": {
@@ -33,19 +33,19 @@
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],
-        "IPREVISION": [ { "value": "5" } ],
+        "IPREVISION": [ { "value": "16" } ],
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "../../../../../../Car_project.gen/sources_1/bd/design_1/ip/design_1_customIP_0_0" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
         "SHAREDDIR": [ { "value": "../../ipshared" } ],
         "SWVERSION": [ { "value": "2026.1" } ],
-        "SYNTHESISFLOW": [ { "value": "GLOBAL" } ]
+        "SYNTHESISFLOW": [ { "value": "OUT_OF_CONTEXT" } ]
       }
     },
     "boundary": {
       "ports": {
         "gpio_in": [ { "direction": "in", "size_left": "3", "size_right": "0" } ],
-        "gpio_": [ { "direction": "out", "size_left": "3", "size_right": "0" } ],
+        "gpio_out": [ { "direction": "out", "size_left": "3", "size_right": "0" } ],
         "s00_axi_aclk": [ { "direction": "in" } ],
         "s00_axi_aresetn": [ { "direction": "in" } ],
         "s00_axi_awaddr": [ { "direction": "in", "size_left": "10", "size_right": "0" } ],
@@ -179,5 +179,5 @@
       }
     }
   },
-  "checksum": "4adabd89"
+  "checksum": "79848a45"
 }

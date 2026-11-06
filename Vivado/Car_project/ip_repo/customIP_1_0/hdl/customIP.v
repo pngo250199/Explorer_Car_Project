@@ -16,7 +16,7 @@
 	(
 		// Users to add ports here
         input wire [3:0] gpio_in,
-        output wire [3:0] gpio_,
+        output wire [3:0] gpio_out,
 		// User ports ends
 		// Do not modify the ports beyond this line
 

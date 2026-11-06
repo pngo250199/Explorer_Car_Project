@@ -42,7 +42,7 @@
         "SELECTEDSIMMODEL": [ { "value": "" } ],
         "SHAREDDIR": [ { "value": "../../ipshared" } ],
         "SWVERSION": [ { "value": "2026.1" } ],
-        "SYNTHESISFLOW": [ { "value": "GLOBAL" } ]
+        "SYNTHESISFLOW": [ { "value": "OUT_OF_CONTEXT" } ]
       }
     },
     "boundary": {
@@ -279,5 +279,5 @@
       }
     }
   },
-  "checksum": "9c1ecb25"
+  "checksum": "3d3b9e58"
 }

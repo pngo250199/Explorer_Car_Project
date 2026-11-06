@@ -1,25 +1,25 @@
 #IN 
-set_property PACKAGE_PIN G15 [get_ports {gpio_in[1]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {gpio_in[1]}]
+set_property PACKAGE_PIN G15 [get_ports {gpio_input[0]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {gpio_input[0]}]
 
-set_property PACKAGE_PIN P15 [get_ports {gpio_in[2]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {gpio_in[2]}]
-out
-set_property PACKAGE_PIN W13 [get_ports {gpio_in[3]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {gpio_in[3]}]
+set_property PACKAGE_PIN P15 [get_ports {gpio_input[1]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {gpio_input[1]}]
 
-set_property PACKAGE_PIN T16 [get_ports {gpio_in[3]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {gpio_in[3]}]
+set_property PACKAGE_PIN W13 [get_ports {gpio_input[2]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {gpio_input[2]}]
+
+set_property PACKAGE_PIN T16 [get_ports {gpio_input[3]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {gpio_input[3]}]
 
 #OUT
-set_property PACKAGE_PIN M14 [get_ports {gpio_out[1]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {gpio_out[1]}]
+set_property PACKAGE_PIN M14 [get_ports {gpio_output[0]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {gpio_output[0]}]
 
-set_property PACKAGE_PIN M15 [get_ports {gpio_out[2]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {gpio_out[2]}]
+set_property PACKAGE_PIN M15 [get_ports {gpio_output[1]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {gpio_output[1]}]
 
-set_property PACKAGE_PIN G14 [get_ports {gpio_out[3]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {gpio_out[3]}]
+set_property PACKAGE_PIN G14 [get_ports {gpio_output[2]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {gpio_output[2]}]
 
-set_property PACKAGE_PIN D18 [get_ports {gpio_out[3]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {gpio_out[3]}]
+set_property PACKAGE_PIN D18 [get_ports {gpio_output[3]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {gpio_output[3]}]

@@ -1,12 +1,12 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xCC6CFA53B4580162",
+      "boundary_crc": "0x20957A5516687E23",
       "device": "xc7z010clg400-1",
       "gen_directory": "../../../../Car_project.gen/sources_1/bd/design_1",
       "name": "design_1",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
-      "synth_flow_mode": "None",
+      "synth_flow_mode": "Hierarchical",
       "tool_version": "2026.1",
       "validated": "true"
     },
@@ -196,6 +196,18 @@
             "direction": "IO"
           }
         }
+      }
+    },
+    "ports": {
+      "gpio_output": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "gpio_input": {
+        "direction": "I",
+        "left": "3",
+        "right": "0"
       }
     },
     "components": {
@@ -1349,7 +1361,7 @@
       },
       "customIP_0": {
         "vlnv": "user.org:user:customIP:1.0",
-        "ip_revision": "5",
+        "ip_revision": "16",
         "xci_name": "design_1_customIP_0_0",
         "xci_path": "ip/design_1_customIP_0_0/design_1_customIP_0_0.xci",
         "inst_hier_path": "customIP_0",
@@ -1435,6 +1447,18 @@
       }
     },
     "nets": {
+      "customIP_0_gpio_": {
+        "ports": [
+          "customIP_0/gpio_out",
+          "gpio_output"
+        ]
+      },
+      "gpio_input_1": {
+        "ports": [
+          "gpio_input",
+          "customIP_0/gpio_in"
+        ]
+      },
       "processing_system7_0_FCLK_CLK0": {
         "ports": [
           "processing_system7_0/FCLK_CLK0",

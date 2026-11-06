@@ -1,22 +1,42 @@
-# Build outputs
-build/
-cmake-build-*/
-Debug/
-Release/
-*.o
-*.elf
-*.hex
-*.bin
-*.map
+# =========================
+# Vivado generated files
+# =========================
+**/.Xil/
+**/*.jou
+**/*.log
+**/*.str
 
-# VS Code
-.vscode/
-!.vscode/extensions.json
+**/*.cache/
+**/*.gen/
+**/*.runs/
+**/*.sim/
+**/*.hw/
+**/*.ip_user_files/
 
-# System files
+# Implementation / synthesis outputs
+**/*.dcp
+**/*.rpt
+**/*.rpx
+**/*.pb
+**/*.wdf
+**/*.vdi
+
+# =========================
+# Vitis generated files
+# =========================
+**/build/
+**/_ide/
+**/.rigel_lopper/
+**/.cache/
+**/compile_commands.json
+
+# BSP/generated platform content
+**/bsp/
+**/zynq_fsbl/
+
+# =========================
+# Editor / OS
+# =========================
 .DS_Store
-Thumbs.db
-
-# Logs
-*.log
-
+*.swp
+*~
