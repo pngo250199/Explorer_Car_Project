@@ -1,8 +1,0 @@
-[
-{
-  "directory": "/home/henry/Embedded/Vitis/car_project/car_baremetal/build",
-  "command": "/home/henry/xilinx/2026.1/Vitis/gnu/aarch32/lin/gcc-arm-none-eabi/bin/arm-none-eabi-gcc -I/home/henry/Embedded/Vitis/car_project/car_baremetal/src -isystem /home/henry/Embedded/Vitis/car_project/linux_platform/export/linux_platform/sw/standalone_ps7_cortexa9_0/include -isystem /home/henry/xilinx/2026.1/gnu/aarch32/lin/gcc-arm-none-eabi/x86_64-oesdk-linux/usr/lib/arm-xilinx-eabi/gcc/arm-xilinx-eabi/13.4.0/include -isystem /home/henry/xilinx/2026.1/gnu/aarch32/lin/gcc-arm-none-eabi/x86_64-oesdk-linux/usr/lib/arm-xilinx-eabi/gcc/arm-xilinx-eabi/13.4.0/include-fixed -isystem /home/henry/xilinx/2026.1/Vitis/gnu/aarch32/lin/gcc-arm-none-eabi/aarch32-xilinx-eabi/usr/include  -DSDT -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard  -MMD -MP -specs=/home/henry/Embedded/Vitis/car_project/linux_platform/export/linux_platform/sw/standalone_ps7_cortexa9_0/Xilinx.spec -I/home/henry/Embedded/Vitis/car_project/linux_platform/export/linux_platform/sw/standalone_ps7_cortexa9_0/include -o CMakeFiles/car_baremetal.elf.dir/main.c.obj -c /home/henry/Embedded/Vitis/car_project/car_baremetal/src/main.c",
-  "file": "/home/henry/Embedded/Vitis/car_project/car_baremetal/src/main.c",
-  "output": "CMakeFiles/car_baremetal.elf.dir/main.c.obj"
-}
-]
