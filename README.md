@@ -136,7 +136,7 @@ while
 
 `DDR -> AXI4-Stream -> Pixel Data`
 
-**Recommended screenshot:** Vivado HDMI output block design.
+STATUS: In progress 🚧
 
 ---
 
@@ -188,7 +188,7 @@ This introduced another important FPGA design concept:
 
 **Different hardware modules may operate at different clock frequencies, so data must be synchronized when crossing between clock domains.**
 
-**Recommended screenshot:** HDMI RX -> VDMA -> DDR -> HDMI TX Vivado block design.
+STATUS: Planned 📝
 
 ---
 
@@ -218,7 +218,7 @@ The important architecture is:
 
 The sink could be HDMI, VGA, memory, or another FPGA processing module.
 
-**Recommended screenshot:** HDMI-input/VGA-output block design or physical VGA output demonstration.
+STATUS: Planned 📝
 
 ---
 
