@@ -269,7 +269,7 @@ Currently, the video pipeline primarily transports image data:
 `Camera -> Video Pipeline -> Display`
 
 The next stage is to insert custom FPGA computation into that path:
-
+```
 `Camera`
 `   ↓`
 `Pixel Stream`
@@ -280,11 +280,11 @@ The next stage is to insert custom FPGA computation into that path:
 `   └── Future Vision Processing`
 `   ↓`
 `Processed Results`
-
+```
 The Cortex-A9 will continue to configure and coordinate the accelerator through AXI4-Lite while the FPGA performs pixel operations in parallel.
 
 This creates the hardware/software architecture:
-
+```
 `Cortex-A9`
 `   |`
 `AXI4-Lite`
@@ -295,7 +295,7 @@ This creates the hardware/software architecture:
 `Hardware Image Accelerator`
 `   ↑`
 `AXI4-Stream Video`
-
+```
 ---
 
 ## 7. Connection to the Autonomous Explorer Project
@@ -303,7 +303,7 @@ This creates the hardware/software architecture:
 The purpose of these FPGA exercises is not simply to display video.
 
 Each stage develops a subsystem that will eventually contribute to the heterogeneous autonomous platform:
-
+```
 `Camera`
 `   ↓`
 `Zynq FPGA`
@@ -322,7 +322,7 @@ Each stage develops a subsystem that will eventually contribute to the heterogen
 `   ├── PWM`
 `   ├── Servo / Motor Control`
 `   └── Real-Time Response`
-
+```
 The FPGA provides parallel computation for image-processing workloads, while the STM32 remains responsible for deterministic real-time sensing and actuator control.
 
 Future experiments will measure the reaction time between obstacle detection and actuator response and compare different processing approaches, including:
