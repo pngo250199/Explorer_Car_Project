@@ -92,7 +92,7 @@ The LED test is intentionally simple. Its purpose is to verify the complete hard
 
 This same AXI control structure can later be reused to configure image-processing accelerators, set threshold values, start hardware operations, and read accelerator status.
 
-STATUS: COMPLETED for both STM32F103 and FPGA
+STATUS: ✅ COMPLETED for both STM32F103 and FPGA
 <img width="2160" height="2880" alt="image" src="https://github.com/user-attachments/assets/aab645b9-3314-4850-b7c4-4763c8dc4cdf" />
 Fig.1. Successful communicate with STM32F103 blue pill MCU board
 
