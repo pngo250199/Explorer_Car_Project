@@ -1,0 +1,17 @@
+# CMake build directories
+Debug/
+Release/
+build/
+
+# Build artifacts
+*.elf
+*.bin
+*.hex
+*.map
+
+# Generated CMake files
+compile_commands.json
+
+# VS Code local configuration
+.vscode/
+
