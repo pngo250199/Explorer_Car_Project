@@ -3,8 +3,9 @@
 
 
 <img width="480" height="270" alt="Screenshot From 2026-11-15 21-53-01" src="https://github.com/user-attachments/assets/169def33-ba74-47bb-a79e-1427934d0550" />
-```Fig 2. Simulation Circuit with Wokwi```
+```Fig 3. UART Validation With Picocom On Linux terminal```
+
 
 
 <img width="1842" height="1010" alt="Screenshot From 2026-11-12 02-50-08" src="https://github.com/user-attachments/assets/6dfeed18-901a-42c5-97d5-f88d30fbbc3a" />
-```Fig 3. UART Validation With Picocom On Linux terminal```
+```Fig 2. Simulation Circuit with Wokwi```
