@@ -219,6 +219,22 @@ if (!(GPIOB->IDR & (1U << 0)))
 
 The IR module is active-low, so PB0 reads logic 0 when an obstacle is detected and logic 1 when the path is clear.
 
+## Cheat sheet to remember
+Configuration register:
+4 bits per pin
+
+CRL:
+shift = pin × 4
+
+CRH:
+shift = (pin - 8) × 4
+
+
+Input/output registers:
+1 bit per pin
+
+mask = 1U << pin
+
 ## Next Steps
 
 1. Validate USART2 transmission on PA2.✅
