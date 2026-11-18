@@ -49,7 +49,11 @@ set(PROJECT_SOURCES
 
     # Firmware drivers
     ${CMAKE_SOURCE_DIR}/Sources/Firmwares_sources/uart.c
+    ${CMAKE_SOURCE_DIR}/Sources/Firmwares_sources/uart1.c
 
+    # Sensor drivers
+    ${CMAKE_SOURCE_DIR}/Sources/Sensors_sources/ir_sensor.c
+    ${CMAKE_SOURCE_DIR}/Sources/Sensors_sources/ultrasound_sensor.c
     # CMSIS system file
     ${STM32CUBE_F1}/Drivers/CMSIS/Device/ST/STM32F1xx/Source/Templates/system_stm32f1xx.c
 
@@ -95,6 +99,7 @@ target_include_directories(${PROJECT_NAME}
 
     # Your own firmware headers
     ${CMAKE_SOURCE_DIR}/Inc/Firmwares_headers
+    ${CMAKE_SOURCE_DIR}/Inc/Sensors_headers
 )
 
 #######################################################################
