@@ -1,29 +1,77 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"1.22069",
-   "Default View_TopLeft":"-202,3",
+   "Clocking and Reset View_Layers":"/axi_gpio_video_ip2intc_irpt:false|",
+   "Clocking and Reset View_ScaleFactor":"0.949231",
+   "Clocking and Reset View_TopLeft":"369,331",
+   "Color Coded_ScaleFactor":"0.869718",
+   "Color Coded_TopLeft":"-149,-26",
+   "Default View_Layers":"/axi_gpio_video_ip2intc_irpt:true|",
+   "Default View_ScaleFactor":"0.635461",
+   "Default View_TopLeft":"104,500",
+   "Display-IntfAXI3":"true",
+   "Display-IntfAXI4Lite":"true",
+   "Display-IntfOthers":"true",
+   "Display-IntfTypeAXIMM":"true",
+   "Display-PortTypeClock":"true",
+   "Display-PortTypeInterrupt":"true",
+   "Display-PortTypeOthers":"true",
+   "Display-PortTypeReset":"true",
    "ExpandedHierarchyInLayout":"",
+   "Interfaces View_Layers":"/processing_system7_0_FCLK_CLK0:false|/processing_system7_0_FCLK_RESET0_N:false|/rst_ps7_0_50M_peripheral_aresetn:false|",
+   "Interfaces View_ScaleFactor":"0.988",
+   "Interfaces View_TopLeft":"-150,-101",
+   "Reduced Jogs_Layers":"/processing_system7_0_FCLK_CLK0:true|/processing_system7_0_FCLK_RESET0_N:true|/rst_ps7_0_50M_peripheral_aresetn:true|",
+   "Reduced Jogs_ScaleFactor":"0.788571",
+   "Reduced Jogs_TopLeft":"-218,3",
    "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:24.0 TLS
 #  -string -flagsOSRD
-preplace port DDR -pg 1 -lvl 4 -x 1010 -y 60 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -lvl 4 -x 1010 -y 90 -defaultsOSRD
-preplace portBus gpio_output -pg 1 -lvl 4 -x 1010 -y 350 -defaultsOSRD
-preplace portBus gpio_input -pg 1 -lvl 0 -x 0 -y 240 -defaultsOSRD
-preplace inst processing_system7_0 -pg 1 -lvl 1 -x 220 -y 110 -defaultsOSRD
-preplace inst customIP_0 -pg 1 -lvl 3 -x 850 -y 350 -defaultsOSRD
-preplace inst axi_smc -pg 1 -lvl 2 -x 570 -y 320 -defaultsOSRD
-preplace inst rst_ps7_0_50M -pg 1 -lvl 1 -x 220 -y 340 -defaultsOSRD
-preplace netloc customIP_0_gpio_ 1 3 1 NJ 350
-preplace netloc gpio_input_1 1 0 3 NJ 240 NJ 240 710J
-preplace netloc processing_system7_0_FCLK_CLK0 1 0 3 20 220 420 230 720
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 2 30 230 410
-preplace netloc rst_ps7_0_50M_peripheral_aresetn 1 1 2 410 400 710J
-preplace netloc axi_smc_M00_AXI 1 2 1 N 320
-preplace netloc processing_system7_0_DDR 1 1 3 NJ 60 NJ 60 NJ
-preplace netloc processing_system7_0_FIXED_IO 1 1 3 430J 90 NJ 90 NJ
-preplace netloc processing_system7_0_M_AXI_GP0 1 1 1 430 120n
-levelinfo -pg 1 0 220 570 850 1010
-pagesize -pg 1 -db -bbox -sgen -160 0 1180 440
+preplace port DDR -pg 1 -lvl 6 -x 1930 -y 470 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 6 -x 1930 -y 500 -defaultsOSRD
+preplace port btns_4bits -pg 1 -lvl 6 -x 1930 -y 1030 -defaultsOSRD
+preplace port btns_4bits_0 -pg 1 -lvl 6 -x 1930 -y 1060 -defaultsOSRD
+preplace portBus gpio_output -pg 1 -lvl 6 -x 1930 -y 1380 -defaultsOSRD
+preplace portBus gpio_input -pg 1 -lvl 0 -x 0 -y 1340 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 5 -x 1670 -y 560 -defaultsOSRD
+preplace inst customIP_0 -pg 1 -lvl 5 -x 1670 -y 1380 -defaultsOSRD
+preplace inst axi_smc -pg 1 -lvl 2 -x 540 -y 1050 -defaultsOSRD
+preplace inst rst_ps7_0_50M -pg 1 -lvl 1 -x 200 -y 830 -defaultsOSRD
+preplace inst axi_gpio_video -pg 1 -lvl 5 -x 1670 -y 1050 -defaultsOSRD
+preplace inst axi_interconnect_hp0 -pg 1 -lvl 4 -x 1280 -y 540 -defaultsOSRD
+preplace inst axi_vdma_0 -pg 1 -lvl 3 -x 910 -y 510 -defaultsOSRD
+preplace inst axis_subset_converter_in -pg 1 -lvl 1 -x 200 -y 1010 -defaultsOSRD
+preplace inst axis_subset_converter_out -pg 1 -lvl 2 -x 540 -y 1210 -defaultsOSRD
+preplace inst proc_sys_reset_0 -pg 1 -lvl 3 -x 910 -y 100 -defaultsOSRD
+preplace inst proc_sys_reset_fclk1 -pg 1 -lvl 3 -x 910 -y 280 -defaultsOSRD
+preplace inst subset_converter_reset -pg 1 -lvl 4 -x 1280 -y 1090 -defaultsOSRD
+preplace inst v_axi4s_vid_out_0 -pg 1 -lvl 2 -x 540 -y 1480 -defaultsOSRD
+preplace inst v_tc_in -pg 1 -lvl 3 -x 910 -y 800 -defaultsOSRD
+preplace inst v_tc_out -pg 1 -lvl 3 -x 910 -y 1180 -defaultsOSRD
+preplace inst v_vid_in_axi4s_0 -pg 1 -lvl 1 -x 200 -y 1470 -defaultsOSRD
+preplace inst xlconcat_0 -pg 1 -lvl 4 -x 1280 -y 1450 -defaultsOSRD
+preplace netloc customIP_0_gpio_ 1 5 1 NJ 1380
+preplace netloc gpio_input_1 1 0 5 NJ 1340 NJ 1340 NJ 1340 NJ 1340 1430J
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 6 30 930 380 930 710 650 1110 710 1450 700 1880
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 6 20 730 NJ 730 690 640 1090J 700 1430J 410 1900
+preplace netloc rst_ps7_0_50M_peripheral_aresetn 1 1 4 370 940 730 1330 NJ 1330 1460
+preplace netloc proc_sys_reset_0_peripheral_aresetn 1 3 1 1130 140n
+preplace netloc processing_system7_0_FCLK_CLK1 1 2 4 730 380 1100 690 1440 420 1890
+preplace netloc axi_gpio_video_ip2intc_irpt 1 4 2 1460 960 1890
+preplace netloc proc_sys_reset_fclk1_peripheral_aresetn 1 3 1 1120 320n
+preplace netloc axi_smc_M00_AXI 1 2 3 690 1350 NJ 1350 NJ
+preplace netloc processing_system7_0_DDR 1 5 1 1910J 470n
+preplace netloc processing_system7_0_FIXED_IO 1 5 1 NJ 500
+preplace netloc processing_system7_0_M_AXI_GP0 1 1 5 390 950 NJ 950 NJ 950 NJ 950 1910
+preplace netloc axi_gpio_video_GPIO 1 5 1 NJ 1030
+preplace netloc axi_gpio_video_GPIO2 1 5 1 1910J 1050n
+preplace netloc axi_smc_M01_AXI 1 2 3 NJ 1030 NJ 1030 N
+preplace netloc axi_smc_M02_AXI 1 2 1 700 440n
+preplace netloc axi_smc_M03_AXI 1 2 1 720 710n
+preplace netloc axi_smc_M04_AXI 1 2 1 N 1090
+preplace netloc axi_vdma_0_M_AXI_MM2S 1 3 1 N 450
+preplace netloc axi_interconnect_hp0_M00_AXI 1 4 1 N 540
+preplace netloc axi_vdma_0_M_AXI_S2MM 1 3 1 N 470
+levelinfo -pg 1 0 200 540 910 1280 1670 1930
+pagesize -pg 1 -db -bbox -sgen -150 0 2090 1620
 "
 }
 0
